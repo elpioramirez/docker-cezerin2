@@ -1,7 +1,7 @@
 FROM node:8
-MAINTAINER Restmount <jsonmount@gmail.com>
+MAINTAINER Luke Busstra <luke.busstra@gmail.com>
 
-ENV NGINX_CODENAME jessie
+ENV NGINX_CODENAME stretch
 ENV CEZERIN_VERSION 0.33.0
 
 # install requirements and NGINX
@@ -23,10 +23,10 @@ RUN npm install pm2 -g
 # download project
 RUN mkdir -p /var/www \
     && cd /var/www \
-    && wget -O cezerin.zip https://github.com/cezerin/cezerin/archive/v$CEZERIN_VERSION.zip \
+    && wget -O cezerin.zip https://github.com/cezerin2/cezerin2/archive/v$CEZERIN_VERSION.zip \
     && unzip cezerin.zip \
     && rm cezerin.zip \
-    && mv cezerin-$CEZERIN_VERSION cezerin
+    && mv cezerin2-$CEZERIN_VERSION cezerin
 
 # overwrite config
 COPY config/* /var/www/cezerin/config/

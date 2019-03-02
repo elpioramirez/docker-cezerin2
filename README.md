@@ -1,11 +1,11 @@
 # Supported tags and respective Dockerfile links
 
 - ```0.33.0```, ```latest```
-[(0.33.0/Dockerfile)](https://github.com/cezerin/docker-cezerin/blob/master/images/0.33.0/Dockerfile)
+[(0.33.0/Dockerfile)](https://github.com/cezerin2/docker-cezerin/blob/master/images/0.33.0/Dockerfile)
 
 
 # What is Cezerin?
-[Cezerin](https://github.com/cezerin/cezerin) is React and Node.js based eCommerce platform.
+[Cezerin](https://github.com/cezerin2/cezerin2) is React and Node.js based eCommerce platform.
 
 # How to use this image
 
@@ -16,7 +16,7 @@
 docker run -d \
 --name store \
 -p 4000:80 \
-cezerin/cezerin:latest
+cezerin2/cezerin2:latest
 ```
 
 - port: **4000**
@@ -31,7 +31,7 @@ docker run -d \
 -e DB_NAME=shop \
 -e DB_USER=user \
 -e DB_PASS=password \
-cezerin/cezerin:latest
+cezerin2/cezerin2:latest
 ```
 
 - port: **4000**
@@ -49,7 +49,7 @@ docker run -d \
 -e DB_USER=user \
 -e DB_PASS=password \
 -v /var/www/cezerin-on-host:/var/www/cezerin \
-cezerin/cezerin:latest
+cezerin2/cezerin2:latest
 ```
 
 ### Environment variables

@@ -2,6 +2,7 @@
   "apps": [{
     "name": "api",
     "script": "./src/api/server/index.js",
+    "node_args": "-r esm",
     "instances": "1",
     "exec_mode": "fork",
     "env": {
@@ -10,6 +11,7 @@
   }, {
     "name": "store",
     "script": "./dist/store/server/index.js",
+    "node_args": "-r esm",
     "instances": "1",
     "exec_mode": "fork",
     "env": {
