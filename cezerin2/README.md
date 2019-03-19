@@ -30,8 +30,8 @@ docker run -d \
 -e DB_HOST=255.255.255.255 \
 -e DB_PORT=27017 \
 -e DB_NAME=shop \
--e DB_USER=user \
--e DB_PASS=password \
+-e DB_USER= \
+-e DB_PASS= \
 cezerin2/cezerin2:latest
 ```
 
@@ -44,8 +44,8 @@ docker run -d \
 -e DB_HOST=255.255.255.255 \
 -e DB_PORT=27017 \
 -e DB_NAME=shop \
--e DB_USER=user \
--e DB_PASS=password \
+-e DB_USER= \
+-e DB_PASS= \
 -v /var/www/cezerin-on-host:/var/www/cezerin \
 cezerin2/cezerin2:latest
 ```

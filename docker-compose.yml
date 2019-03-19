@@ -9,8 +9,8 @@ services:
       - DB_HOST=db
       - DB_PORT=27017
       - DB_NAME=shop
-      - DB_USER=user
-      - DB_PASS=password
+      - DB_USER=
+      - DB_PASS=
     volumes:
       - ./content-on-host:/var/www/cezerin2/public/content
     depends_on:
