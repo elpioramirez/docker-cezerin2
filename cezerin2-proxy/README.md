@@ -1,6 +1,7 @@
 # Supported tags and respective Dockerfile links
 
-- ```0.34.0```, ```latest```
+- ```0.34.0```,```0.35.0```,  ```latest```
+[(0.35.0/Dockerfile)](https://github.com/cezerin2/docker-cezerin2/blob/v0.35.0/cezerin2-proxy/Dockerfile)
 [(0.34.0/Dockerfile)](https://github.com/cezerin2/docker-cezerin2/blob/v0.34.0/cezerin2-proxy/Dockerfile)
 
 
