@@ -2,7 +2,8 @@ FROM node:8
 LABEL maintainer "Nitin Goyal <nitingoyal.dev@gmail.com>, Luke Busstra <luke.busstra@gmail.com>"
 
 ENV NGINX_CODENAME stretch
-ENV CEZERIN_VERSION 0.35.0
+#ENV CEZERIN_VERSION 0.35.0
+ENV CEZERIN_VERSION master
 
 # install requirements and NGINX
 RUN echo "deb http://nginx.org/packages/debian/ ${NGINX_CODENAME} nginx" >> /etc/apt/sources.list \
@@ -19,7 +20,7 @@ RUN echo "deb http://nginx.org/packages/debian/ ${NGINX_CODENAME} nginx" >> /etc
 # download project
 RUN mkdir -p /var/www \
     && cd /var/www \
-    && wget -O cezerin2-admin.zip https://github.com/cezerin2/cezerin2-admin/archive/v$CEZERIN_VERSION.zip \
+    && wget -O cezerin2-admin.zip https://github.com/cezerin2/cezerin2-admin/archive/$CEZERIN_VERSION.zip \
     && unzip cezerin2-admin.zip \
     && rm cezerin2-admin.zip \
     && mv cezerin2-admin-$CEZERIN_VERSION cezerin2-admin

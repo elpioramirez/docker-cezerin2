@@ -2,7 +2,8 @@ FROM node:8
 LABEL maintainer "Nitin Goyal <nitingoyal.dev@gmail.com>, Luke Busstra <luke.busstra@gmail.com>"
 
 ENV NGINX_CODENAME stretch
-ENV CEZERIN_VERSION 0.35.0
+#ENV CEZERIN_VERSION 0.35.0
+ENV CEZERIN_VERSION master
 ENV STORE_PORT 3000
 
 # install requirements and NGINX
@@ -24,7 +25,7 @@ RUN npm install pm2 -g
 # download project
 RUN mkdir -p /var/www \
     && cd /var/www \
-    && wget -O cezerin2-store.zip https://github.com/cezerin2/cezerin2-store/archive/v$CEZERIN_VERSION.zip \
+    && wget -O cezerin2-store.zip https://github.com/cezerin2/cezerin2-store/archive/$CEZERIN_VERSION.zip \
     && unzip cezerin2-store.zip \
     && rm cezerin2-store.zip \
     && mv cezerin2-store-$CEZERIN_VERSION cezerin
