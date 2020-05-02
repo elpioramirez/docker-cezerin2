@@ -24,7 +24,7 @@ docker run -d \
 mongo:latest
 ```
 
-### Start a ceszerin2 server instance
+### Start a cezerin2 server instance
 
 ```shell
 docker run -d \
@@ -40,7 +40,7 @@ docker run -d \
 cezerin2/cezerin2:latest
 ```
 
-### Start a ceszerin2 admin server instance
+### Start a cezerin2 admin server instance
 
 ```shell
 docker run -d \
@@ -51,11 +51,11 @@ docker run -d \
 cezerin2/cezerin2-admin:latest
 ```
 
-### Start a ceszerin2 store server instance
+### Start a cezerin2 store server instance
 
 ```shell
 docker run -d \
---name ceszerin2-store \
+--name cezerin2-store \
 --link cezerin2:cezerin2 \
 -p 3000:80 \
 -e API_BASE_URL=http://cezerin2/api/v1 \ 
