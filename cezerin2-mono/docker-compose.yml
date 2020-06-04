@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  cezerin2:
+    image: cezerin2/cezerin2-mono
+    ports:
+      - 3000:3000
+      - 3001:3001
+      - 3002:3002
+    environment:
+      - DB_HOST=db
+      - DB_PORT=27017
+      - DB_NAME=shop
+      - DB_USER=
+      - DB_PASS=
+    volumes:
+      - ./content-on-host:/var/www/cezerin2/public/content
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: mongo:3.4
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db-on-host:/data/db
+    restart: always
