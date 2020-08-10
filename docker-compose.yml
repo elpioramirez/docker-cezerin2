@@ -2,7 +2,7 @@ version: '3'
 
 services:
   cezerin2:
-    image: cezerin2/cezerin2
+    image: cezerin2/cezerin2:0.35.0
     environment:
       - LANGUAGE=en
     ports:
@@ -20,7 +20,7 @@ services:
     restart: always
 
   cezerin2-store:
-    image: cezerin2/cezerin2-store
+    image: cezerin2/cezerin2-store:0.35.0
     environment:
       - LANGUAGE=en
       - API_BASE_URL=http://cezerin2/api/v1
@@ -32,7 +32,7 @@ services:
     restart: always
 
   admin:
-    image: cezerin2/cezerin2-admin
+    image: cezerin2/cezerin2-admin:0.35.0
     environment:
       - LANGUAGE=en
     ports:
